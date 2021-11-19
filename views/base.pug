@@ -1,0 +1,29 @@
+doctype html 
+html
+    head
+        block head
+            meta(http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'")
+            meta(charset="UTF-8")
+            meta(name='viewport' content='width=device-width,initial-scale=1.0')
+            link(rel="stylesheet", href="/css/style.css")
+            link(rel="shortcut icon", href="/img/favicon.png", type="image/png")
+            link(rel = "stylesheet" href ="https://fonts.googleapis.com/css?family=Lato:300,300i,700")
+            title Natours | #{title}
+
+    body
+        //- HEADER
+        include _header
+
+        //CONTENT
+        block content
+            h1 This is a placeholder heading 
+
+        //FOOTER
+        include _footer  
+
+        script(src = `./../js/login.js`)
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(script-src-elem='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js')
+      
+     
+
